@@ -67,16 +67,4 @@ contract Savings {
     }
 }
 
-// system level
-// total deposit - total withdraw == users[balance]++
-// total depost <= MAX_DEPOSIT_AMOUNT
 
-// function level
-// deposit
-// each user depost >= MIN_DEPOSIT_AMOUNT
-// balance of user must increase by the amount deposit after depositing
-
-// withdraw
-// each user withdraw <= user[balance]
-// balance of user must reduce by the amount withdraw after withdrawal
-// balance of address(this) must reduce by the amount withdraw after withdrawawl

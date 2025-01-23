@@ -6,6 +6,26 @@ import {StdInvariant} from "forge-std/StdInvariant.sol";
 import {Savings} from "../../src/Savings.sol";
 import {Token} from "./mocks/Token.sol";
 
+
+// system level
+// total deposit - total withdraw == users[balance]++
+// total depost <= MAX_DEPOSIT_AMOUNT
+
+// function level
+// deposit
+// each user depost >= MIN_DEPOSIT_AMOUNT
+// balance of user must increase by the amount deposit after depositing
+
+// withdraw
+// each user withdraw <= user[balance]
+// balance of user must reduce by the amount withdraw after withdrawal
+// balance of address(this) must reduce by the amount withdraw after withdrawawl
+
+
+
+
+
+
 contract SavingsStatelessFuzzCatchesTest is Test {
     Savings public savings;
     Token public token;
@@ -47,3 +67,5 @@ contract SavingsStatelessFuzzCatchesTest is Test {
         assertEq(token.balanceOf(address(savings)), amount, "Contract should hold the deposited tokens");
     }
 }
+
+
