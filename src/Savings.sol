@@ -25,7 +25,7 @@ contract Savings {
     // @notice Deposit event is emitted after a deposit occurs
     event Deposit(address depositor, uint256 amount, uint256 totalDeposited);
 
-    // @notice Withdraw event is emitted after a withdraw occurs
+    // @notice Withdraw event is emitted after a withdraw occursSavingsStatelessFuzzCatchesTest.t.sol
     event Withdraw(address user, uint256 amount);
 
     constructor(address tokenAddress) {
