@@ -42,3 +42,10 @@ contract SavingInvariantTest is StdInvariant, Test {
         assertEq(savings.totalDeposited(), token.balanceOf(user));
     }
 }
+
+
+
+
+
+
+
