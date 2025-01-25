@@ -6,9 +6,10 @@ import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 contract Token is ERC20 {
     constructor() ERC20("Token", "TK") {}
 
-    function mint(address to, uint256 amount) external {
-        _mint(to, amount);
-    }
+    function mint(address account, uint256 amount) public {
+    require(account != address(0), "ERC20: mint to the zero address");
+    _mint(account, amount);
+}
 
     function deposit() external payable {
         _mint(msg.sender, msg.value);

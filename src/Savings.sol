@@ -66,5 +66,3 @@ contract Savings {
         token.transfer(msg.sender, interest);
     }
 }
-
-
